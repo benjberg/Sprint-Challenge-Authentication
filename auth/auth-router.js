@@ -11,7 +11,7 @@ router.post('/register', (req,res) => {
     user.password = hash;
 
     Users.add(user).then(saved => {
-        res.status(201).json(saved);
+        res.status(201).json({message: 'user registered!' , saved});
 
     }).catch(err =>{
         res.status(500).json({message: 'an error has occurred'})

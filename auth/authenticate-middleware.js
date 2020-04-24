@@ -19,7 +19,7 @@ jwt.verify(token, secret, (error,decodedToken) =>{
     }
   });
 } else {
-  res.status(400).json({message: 'please provide creds.'})
+  res.status(400).json({message: 'Unauthorized Access.'})
 } 
 
 
